@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Us</title>
+  <style>
+    p {
+      font-family: 'Optima';
+      font-size: 14pt
+    }
+
+    /* Navigation Bar */
+    .nav {
+      list-style-type: none;
+      margin: 0;
+      margin-bottom: 5px;
+      padding: 0;
+      float: left;
+      overflow: hidden;
+      border-top: solid;
+      border-top-width: 1px;
+      z-index: 2;
+      background-color: rgb(240, 240, 240);
+      width: 100%;
+    }
+
+    .nav-li {
+      float: left;
+      padding: 15px 20px;
+      display: block;
+    }
+
+    .nav-li-right {
+      float: right;
+      padding: 12px 20px;
+      display: block;
+    }
+
+    .nav-li p {
+      text-decoration: none;
+      color: black;
+      margin: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+
+    }
+
+    .nav-li-right p {
+      color: black;
+      margin: 0;
+    }
+
+    .nav-li:hover {
+      background-color: rgb(200, 200, 200);
+    }
+
+    .nav-li-active {
+      background-color: rgb(240, 240, 240);
+      float: left;
+      padding: 15px 20px;
+      display: block;
+    }
+
+    .nav-li-active p {
+      color: black;
+      margin: 0
+    }
+
+    /* Positions */
+    .sticky {
+      position: sticky;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    #submitComment {
+      background-color: #555555;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition-duration: 0.4s;
+    }
+
+    #submitComment:hover {
+      background-color: #6e6e6e;
+    }
+
+    .userComment {
+      background-color: white;
+      margin-bottom: 15px;
+      padding: 10px 15px;
+      border-left: 4px solid #555555;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="nav">
+    <li class="nav-li" onclick="location.href='ict fp.html';">
+      <p>Home</p>
+    </li>
+    <li class="nav-li" onclick="location.href='abeezee products.html';">
+      <p>Products</p>
+    </li>
+    <li class="nav-li-active">
+      <p>Contact Us</p>
+    </li>
+    <li class="nav-li" onclick="location.href='About Us.html';">
+      <p>About us</p>
+    </li>
+  </ul>
+
+  <h1>Contact Us</h1>
+  <p> You can contact us via phone (+6212345678910), email (abeezee@gmail.com), or you can leave a comment down here!
+  </p>
+
+  <!-- Comment Form -->
+  <div>
+    <h2>Leave a Comment</h2>
+    <textarea id="commentInput" placeholder="Your comment..." style="width: 100%; height: 100px;"></textarea>
+    <br>
+    <button id="submitComment">Post Comment</button>
+  </div>
+
+  <!-- Comments Section -->
+  <div id="commentsSection"
+    style="margin-top: 20px; padding: 20px; background-color: #f2f2f2; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.06);">
+    <h2 style="color: #333; margin-bottom: 20px; border-bottom: 1px solid #dcdcdc; padding-bottom: 10px;">User Comments
+    </h2>
+  </div>
+
+
+  <script type="text/javascript">
+    document.getElementById('submitComment').addEventListener('click', function () {
+      var userComment = document.getElementById('commentInput').value;
+      if (userComment.trim() === '') {
+        alert('Please enter a comment.');
+        return;
+      }
+      var commentsSection = document.getElementById('commentsSection');
+      var newComment = document.createElement('div');
+
+      newComment.classList.add('userComment');
+      newComment.textContent = userComment;
+
+      commentsSection.appendChild(newComment);
+      document.getElementById('commentInput').value = '';
+    });
+  </script>
+
+  <!-- Use Enter to submit comment -->
+  <script type="text/javascript">
+    function postComment() {
+      var userComment = document.getElementById('commentInput').value;
+      if (userComment.trim() === '') {
+        alert('Please enter a comment.');
+        return;
+      }
+      var commentsSection = document.getElementById('commentsSection');
+      var newComment = document.createElement('div');
+      newComment.classList.add('userComment');
+      newComment.textContent = userComment;
+
+      commentsSection.appendChild(newComment);
+      document.getElementById('commentInput').value = '';
+    }
+
+    document.getElementById('submitComment').addEventListener('click', postComment);
+
+    document.getElementById('commentInput').addEventListener('keyup', function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        postComment();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
