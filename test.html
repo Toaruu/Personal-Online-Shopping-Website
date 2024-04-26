@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Basics</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h1>Welcome to Javascript Basics</h1>
+
+    <button onclick="showMessage()">Click Me for Message</button>
+    <p id="demo">This paragraph will change on button click.</p>
+    <button id="changeText">Change Text</button>
+
+    <script>
+        function showMessage() {
+            alert('You clicked a button!');
+        }
+
+        document.getElementById('changeText').addEventListener('click', function () {
+            document.getElementById('demo').innerHTML = 'The text has changed!';
+        });
+    </script>
+
+    <h1>My First JavaScript</h1>
+
+    <!-- Examples of Inline JavaScript -->
+    <h3>Test 1</h3>
+    <button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">
+        Click me to display Date and Time.
+    </button>
+    <p id="demo1"></p>
+
+    <h3>Test 2</h3>
+    <button onclick="alert('Hello, World')">
+        Click Me!
+    </button>
+
+    <!-- Examples of Internal JavaScript -->
+    <script>
+        alert('Page reloaded.');
+    </script>
+
+    <!-- Examples of External JavaScript -->
+    <script src="myScript.js"></script>
+
+    <!-- Accessing Webpage Elements -->
+    <h3>Test 3</h3>
+    <div id="demo2">Some text</div>
+    <script>
+        var elem = document.getElementById('demo2');
+        elem.innerHTML = 'New Text';
+    </script>
+
+    <!-- Event-Based Triggers -->
+    <h3>Test 4</h3>
+    <button id="myButton">Click me</button>
+    <script>
+        document.getElementById('myButton').addEventListener('click', function () {
+            alert('Button was clicked!');
+        });
+    </script>
+
+</body>
+
+</html>
